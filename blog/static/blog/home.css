@@ -1,0 +1,505 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header {
+  text-align: center;
+  background-color: white;
+}
+container {
+  min-height: 100%;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 60px;
+  font-family: 'Bebas Neue';font-size: 60px;
+  font-stretch: expanded;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #555555;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: none;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.rightnav{
+  float: right;
+}
+
+
+/* Sidebar/left column */
+.side {
+  float: left;
+  -ms-flex: 30%;
+  flex: 30%;
+  
+  padding: 20px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+/*form style*/
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #f05855;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  width: 100%;
+}
+
+
+.container {
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 40%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*end of form style*/
+
+.main {
+  text-align: center;
+  margin-top: 40px;
+  float: right;
+  -ms-flex: 70%;
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  margin-left:170px;
+  width: 1430px;
+  height: 520px;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+
+  transform: translate(-50%, -50%);
+  transition: all 0.195s ease;
+  transform-style: preserve-3d;
+}
+body {
+    background-color: #fff;
+    color: #24292e;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ================= */
+
+.cld-main {}
+.cld-main a {
+  color: #0080FF;
+}
+  .cld-datetime{
+    position: relative;
+    width: 66%;
+    min-width: 100px;
+    max-width: 300px;
+    margin: auto;
+    overflow: hidden;
+  }
+  .cld-datetime .today{
+    position: relative;
+    float: left;
+    width: calc(100% - 40px);
+    margin: auto;
+    text-align: center;
+  }
+  .cld-nav{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+  .cld-nav:hover{
+    cursor: pointer;
+  }
+  .cld-nav:hover svg{
+      fill: #005EFF;
+  }
+  .cld-rwd{
+    float: left;
+  }
+  .cld-fwd{
+    float: right;
+  }
+    .cld-nav svg:hover{
+
+    }
+.cld-labels, .cld-days{
+  padding-left: 0;
+}
+  .cld-label, .cld-day{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 14.28%;
+    text-align: center;
+  }
+  .cld-day{
+    border: 1px solid #eee;
+  }
+  .cld-day.today .cld-number{
+    background: #0080FF;
+    color: #fff;
+  }
+  .cld-day.disableDay{
+    opacity: 0.5;
+  }
+  .cld-day.nextMonth, .cld-day.prevMonth{
+    opacity: 0.33;
+  }
+    .cld-number{
+      position: relative;
+      margin: 0;
+      padding: 10px;
+        height: 90px;
+            overflow-y: auto;
+    }
+      .cld-title{
+          float: right;
+        _position: absolute;
+        _z-index: 5;
+        display: block;
+        _top: 35px;
+        _left: 0;
+          line-height: 1;
+        padding: 2px 4px;
+          margin: 0 0 1px 0;
+        background-color: #2196F3;
+        white-space: nowrap;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+.cld-title span {
+    color: #ffffff;
+}
+      .cld-number:hover .cld-title{
+        display: block;
+      }
+
+      .cld-number.eventday{
+        color: #0080FF;
+      }
+      .cld-number.eventday:hover{
+        cursor: pointer;
+        background: #eee;
+      }
+      .today .cld-number.eventday:hover{
+        background: #005EFF;
+      }
+
+
+
+      .content-section {
+        background: #ffffff;
+        padding: 10px 20px;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        margin-bottom: 20px;
+      }
+      
+      .article-title {
+        color: #444444;
+      }
+      
+      a.article-title:hover {
+        color: #428bca;
+        text-decoration: none;
+      }
+      
+      .article-content {
+        white-space: pre-line;
+      }
+      
+      .article-img {
+        height: 65px;
+        width: 65px;
+        margin-right: 16px;
+      }
+      
+      .article-metadata {
+        padding-bottom: 1px;
+        margin-bottom: 4px;
+        border-bottom: 1px solid #e3e3e3
+      }
+      
+      .article-metadata a:hover {
+        color: #333;
+        text-decoration: none;
+      }
+      
+      .article-svg {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+      }
+      
+      .account-img {
+        height: 125px;
+        width: 125px;
+        margin-right: 20px;
+        margin-bottom: 16px;
+      }
+      
+      .account-heading {
+        font-size: 2.5rem;
+      }
+
+/* Header/logo Title
+
+.main.is-rotated-left {
+  transform: translate(-50%, -50%) rotateY(-4deg);
+}
+.main.is-rotated-right {
+  transform: translate(-50%, -50%) rotateY(4deg);
+}
+.main .sideb,
+.main .right-wrapper {
+  background-color: white;
+  width: 50%;
+  float: left;
+  height: 100%;
+  box-sizing: border-box;
+
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main .header {
+  padding: 15px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main .header i {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.main .header span {
+  display: inline-block;
+  margin: 0 10px;
+  font-weight: 700;
+}
+
+.main .right-wrapper {
+  background-color: #f05855;
+  color: white;
+  transform-origin: left-center;
+  transform: rotateY(110deg);
+  transition: all 0.5s;
+}
+.main .right-wrapper.is-active {
+  transform: rotateY(0deg);
+}
+.main .right-wrapper .header {
+  text-align: left;
+  justify-content: center;
+}
+.main .right-wrapper .day {
+  font-size: 12em;
+  text-indent: -12px;
+  display: block;
+}
+.main .right-wrapper .month {
+  font-size: 2.5em;
+}
+
+.main .sideb .showDate i.is-active {
+  transform: scale(-1);
+}
+
+.main .sideb table {
+  text-align: center;
+  width: 325%;
+  height: 180%;
+  margin: 30px auto 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.main .sideb table tbody:before {
+  content: "-";
+  display: block;
+  line-height: 0.75em;
+  color: transparent;
+}
+.main .sideb table th {
+  color: #f05855;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.main .sideb table td {
+  padding: 11px 5px;
+  color: #ced0ce;
+  font-size: 0.75em;
+  transition: all 0.3s;
+  position: relative;
+}
+.main .sideb table td::before {
+  content: "";
+  display: none;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -8px);
+  background-color: #f05855;
+}
+.main .sideb table td.currentDay::before {
+  display: block;
+}
+.main .sideb table td.selectable {
+  color: #303633;
+
+}
+.main .sideb table td.selectable:hover {
+  background: #f05855;
+  color: white;
+}
+
+
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: center;
+}
+
+*/
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}

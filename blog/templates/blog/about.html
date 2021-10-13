@@ -1,0 +1,14 @@
+
+{% extends "blog/base.html" %}
+{% block content %}
+
+    {% if user.profile.admin == True %}
+     <h1>Blog About me ADMIN</h1>
+
+    {% else %}
+        <h1>Blog About me TRAINER</h1>
+    
+    {% endif %}
+
+{% endblock content %}
+

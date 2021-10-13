@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'blog/home.css' %}">
+  <script type="text/javascript" src="{% static 'blog/schedule.js' %}"></script>
+  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+
+  <script  src="{% static 'blog/home.js' %}"></script>
+  {% block htmlhead %}
+  {% endblock htmlhead %}
+  </head>
+
+
+
+  <body>
+  <div id="container">
+
+  <div class="header">
+    <h1>Scheduling</h1>
+  </div>
+
+  <div class="navbar">
+
+    <a href="{% url 'blog-home' %}">Home</a>
+    <a href="{% url 'schedule' %}">Schedule</a>
+    <!-- <a href="">Courses</a> -->
+    <a href="{% url 'notification' %}">Notifications</a>
+    <a href="{% url 'qualifications' %}">Qualifications</a>
+    <a href="{% url 'profile' %}">Profile</a>
+
+
+
+    <a style="float:right"class="rightnav" href="{% url 'logout' %}">Logout</a>
+    <a style="float:right"class="rightnav" href="{% url 'profile' %}">Signed in as: {{ user.username }}</a>
+
+    {% if user.profile.admin == True %}
+    <a style="float:right"class="rightnav" href="{% url 'links' %}">Links</a>
+      <a style="float:right"class="rightnav" href="{% url 'register' %}">New Trainer</a>
+      <a style="float:right"class="rightnav" href="{% url 'userlist' %}">User List</a>
+
+      {% block nav %} {% endblock %}
+    {% endif %}
+
+  </div>
+
+    <div class="side">
+      {% block contact %}{% endblock %}
+
+  </div>
+
+  </div>
+
+    <div class="main">
+      {% block content %}{% endblock %}
+
+  </div>
+  </div>
+      <script  src="{% static 'blog/home.js' %}"></script>
+
+
+
+  <div class="footer">
+
+  </div>
+
+
+  </body>
+
+</html>

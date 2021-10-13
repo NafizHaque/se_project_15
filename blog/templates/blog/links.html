@@ -1,0 +1,46 @@
+
+{% extends "blog/base.html" %}
+{% block content %}
+
+    {% if user.profile.admin == True %}
+
+
+    <h1>Admin links</h1>
+
+    <a  href="{% url 'post-qualifications'  %}" class="button" style="font-size: 16px"><span>New Qualification</span> </a>
+    <br>
+    <br>
+    <br>
+    <a  href="{% url 'post-create'  %}" class="button" style="font-size: 16px"><span>New Notification</span> </a>
+    <br>
+    <br>
+    <br>
+
+    <a href="{% url  'scheduleitem-create' %}" class="button" style="font-size: 16px"><span>Add to Schedule</span> </a>
+
+    <br>
+    <br>
+    <br>
+    <a href="{% url  'scheduleitem' user.username %}" class="button" style="font-size: 16px"><span>Schedule Overview</span> </a>
+
+    <br>
+    <br>
+    <br>
+
+    <a href="{% url 'courses-home' %}"  class="button" style="font-size: 16px"><span>Courses</span></a>
+
+        <!-- New Course Info button exists in Course page
+        <br /><a style="float:right"class="rightnav" href="{% url 'courses-create' %}">New Course info</a> -->
+        <!-- Course objects can now be accessed within their respective courses.
+          <br /><a style="float:right"class="rightnav" href="{% url 'courseobject-home' %}"> Course Objects</a> -->
+
+
+
+
+    {% else %}
+        <h1>TRAINER</h1>
+
+
+    {% endif %}
+
+{% endblock content %}
