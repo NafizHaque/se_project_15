@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block htmlhead %}
+  <link rel=stylesheet href="{% static 'courses/content.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Editing - {{ courseinfo.title }}</h1>
+    <div class="edit-box">
+      <label for="new-title">New Title: </label>
+      <input type="text" name="new-title" value="{{ courseinfo.title }}">
+      <label for="new-description">New Description: </label>
+      <textarea name="new-description" rows="8" cols="80">{{ courseinfo.description }}</textarea>
+    </div>
+{% endblock content %}
