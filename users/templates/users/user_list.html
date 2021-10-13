@@ -1,0 +1,37 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+
+
+  <h1> Trainer List </h1>
+  {% for use in users %}
+
+  {% if use.profile.admin == False %}
+
+    <a href="{% url 'useroptions' use.username %}" class="button" style="font-size: 24px"><span>{{ use.username }}</span></a>
+    <br>
+    <br>
+
+
+  {% endif %}
+
+  {% endfor %}
+
+
+  <h1> Admin List </h1>
+  {% for use in users %}
+
+  {% if use.profile.admin == True %}
+
+    <a href="{% url 'useroptions' use.username %}" class="button" style="font-size: 24px"><span>{{ use.username }}</span></a>
+
+    <br>
+    <br>
+
+
+
+  {% endif %}
+
+  {% endfor %}
+
+{% endblock content %}

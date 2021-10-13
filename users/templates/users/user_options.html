@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+{% block nav %}
+<a style="float:right"class="rightnav" href="{% url 'userpage' fuser.username %}">User Page</a>
+
+{% endblock nav %}
+
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="content-section">
+    <div class="media">
+      <img class="rounded-circle account-img" src=" {{ fuser.profile.image.url }}">
+      
+      <div class="media-body">
+        <h2 class="account-heading">{{ fuser.username}}</h2>
+        <p class="text-secondary">{{ fuser.email }}</p>
+      </div>
+    </div>
+  </div>
+
+  {% endblock content %}
