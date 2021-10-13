@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <a href="{% url 'schedule-download' %}"> <h1>Download Schedule</h1> </a>
+    <div style="text-align: left">
+      <p>Instructions for Outlook Desktop:</p>
+      <ul>
+        <li>Go to "File > Open/Export > Import/Export".</li>
+        <li>Select "Import from another program or file" and click "Next".</li>
+        <li>Select "Comma separated values" and click "Next".</li>
+        <li>Click on "Browse..." and "Open" the downloaded file, then click "Next".</li>
+        <li>Click on "Next".</li>
+        <li>Finally, click on "Finish".</li>
+      </ul>
+    </div>
+
+{% endblock content %}
